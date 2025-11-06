@@ -1,1 +1,26 @@
+shipment_data_collection:
+  description: >
+    Given a shipment record (shipment_data and customer_impact fields),
+    extract and summarize all important details such as lane, mode, timing,
+    and any obvious operational risks.
+  expected_output: >
+    A concise text summary of the shipment details and any useful context
+    for risk assessment.
+
+network_risk_analysis:
+  description: >
+    Using the shipment lane, mode, and timing, analyze potential network
+    risks such as port congestion, weather, holidays, strikes, or typical
+    delay patterns. Focus on realistic logistics risks.
+  expected_output: >
+    A clear explanation of the main risk drivers and how they might affect
+    the ETA.
+
+shipment_risk_scoring_and_validation:
+  description: >
+    Combine shipment details and network risk analysis to produce a
+    structured ShipmentRiskResult object, including delay_risk_score (0–100),
+    risk_drivers, eta_adjustment_minutes, and mitigation_recommendation.
+  expected_output: >
+    A JSON object strictly following the ShipmentRiskResult schema.
 
