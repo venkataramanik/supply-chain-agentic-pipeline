@@ -1,1 +1,18 @@
+alert_drafting:
+  description: >
+    Given a high-risk shipment result (ShipmentRiskResult), draft an internal
+    alert for a logistics planner that explains the situation and impact in
+    simple terms.
+  expected_output: >
+    A short alert message including shipment ID, lane, risk level, and a
+    one-paragraph explanation of the situation.
+
+mitigation_optimization:
+  description: >
+    Take the drafted alert and add 2–3 concrete mitigation options (e.g.
+    expedite via air, reroute, split shipment, or notify customer) based on
+    the risk drivers and customer priority.
+  expected_output: >
+    A final alert including both explanation and actionable mitigation
+    recommendations.
 
